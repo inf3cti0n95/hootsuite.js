@@ -24,7 +24,7 @@ export const get_auth_token = (
         formData: { code, redirect_uri, grant_type: 'authorization_code' },
         json: true,
         headers: {
-            Authorization: `Basic ${new Buffer(`${client_id}:${client_secret}`).toString('base64')}`,
+            Authorization: `Basic ${Buffer.from(`${client_id}:${client_secret}`).toString('base64')}`,
         },
     });
 };

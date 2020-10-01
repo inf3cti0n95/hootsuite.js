@@ -1,0 +1,59 @@
+{
+  "name": "hootsuite.js",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon --watch \"src/**/*.ts\" --ignore \"node_modules/**/*\" --exec ts-node src/index.ts",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inf3cti0n95/hootsuite.js.git"
+  },
+  "keywords": [
+    "hootsuite"
+  ],
+  "author": "Viraj Trivedi <inf3cti0n95@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inf3cti0n95/hootsuite.js/issues"
+  },
+  "homepage": "https://github.com/inf3cti0n95/hootsuite.js#readme",
+  "devDependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "@types/form-data": "^2.5.0",
+    "@types/isomorphic-fetch": "0.0.35",
+    "@types/node": "^14.0.14",
+    "@types/request": "^2.48.5",
+    "@types/request-promise-native": "^1.0.17",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.8",
+    "form-data": "^3.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8"
+  }
+}

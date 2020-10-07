@@ -1,5 +1,5 @@
 name: NPM Test
-on: [push]
+on: [push,pull_request]
 
 jobs:
   test:
@@ -8,9 +8,4 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Set up NodeV14
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: '14'
-      - run: npm i
-      - run: npm run test
+      - run: npm cit
